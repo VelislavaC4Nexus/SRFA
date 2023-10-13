@@ -19,7 +19,7 @@ function appendToUrl(url, params) {
 }
 
 /**
- * Checks whether the basket is valid. if invalid displays error message and disables
+ * Checks whether the basket is valid. if invalid displays error message and disables AA
  * checkout button
  * @param {Object} data - AJAX response from the server
  */
