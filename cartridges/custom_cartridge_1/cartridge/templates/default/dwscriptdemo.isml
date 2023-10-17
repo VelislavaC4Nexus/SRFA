@@ -1,0 +1,8 @@
+<isscript>
+    let custmerId=customer.getID();
+    let customerName=custmer.profile.firstName
+</isscript>
+
+<h1>Hello from DWScriptDemo</h1>
+<h1>ID:${custmerId} FirstName: ${customerName}</h1>
+<h2>Hello pdict ${pdict.ID}</h2>
