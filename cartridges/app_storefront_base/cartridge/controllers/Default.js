@@ -38,8 +38,10 @@ server.get(
             res.page("homepage");
         } else {
             res.render("home/homePage");
+            
         }
         next();
+        
     },
     pageMetaData.computedPageMetaData
 );

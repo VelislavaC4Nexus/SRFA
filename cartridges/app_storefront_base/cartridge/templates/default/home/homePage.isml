@@ -4,6 +4,9 @@
         assets.addJs('/js/productTile.js');
         assets.addCss('/css/homePage.css');
     </isscript>
+    <script>
+       console.log("HOme")
+    </script>
 
     <!-- +1.888.555.0199 --><!--This phone is a requirement to support existing Gomez monitor of SiteGenesis. Demandware customers can remove this.-->
     <div class="home-main homepage">

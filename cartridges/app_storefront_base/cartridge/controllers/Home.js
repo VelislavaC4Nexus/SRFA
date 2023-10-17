@@ -45,6 +45,7 @@ server.get(
         next();
     },
     pageMetaData.computedPageMetaData
+    
 );
 
 server.get("ErrorNotFound", function (req, res, next) {
