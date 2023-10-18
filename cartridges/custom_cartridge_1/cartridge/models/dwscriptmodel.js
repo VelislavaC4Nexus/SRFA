@@ -5,19 +5,18 @@
  * @returns {String} customerID
  */
 
-function getCustomerID(customer) {
-    return customer.getID();
-}
+// function getCustomerID(customer) {
+//     return customer.getID();
+// }
 /**
  * @constructor
  */
-function dwScriptModel(customer) {
+function DwScriptModel() {
 
     //constructor
-    this.ID = getCustomerID(customer);
-    this.name = getCustomerByToken(customer);
-
+    // this.ID = getCustomerID(customer);
+    this.ID='123'
 
 }
 
-module.export = dwScriptModel;
+module.export = DwScriptModel;

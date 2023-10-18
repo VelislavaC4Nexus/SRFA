@@ -40,7 +40,7 @@
 
 //         res.render("dwscriptdemo",);
 //         //TypeError: [object Object] is not a function, it is object. (custom_cartridge_1/cartridge/controllers/DWScriptDemo.js#38)
-            
+
 //         next();
 //     },
 //     pageMetaData.computedPageMetaData
@@ -61,7 +61,7 @@ var server = require("server");
 var cache = require("*/cartridge/scripts/middleware/cache");
 var consentTracking = require("*/cartridge/scripts/middleware/consentTracking");
 var pageMetaData = require("*/cartridge/scripts/middleware/pageMetaData");
-// const DwModel = require("*/cartridge/models/dwScript");
+const DwScriptModel = require("*/cartridge/models/dwScriptModel");
 
 /**
  * Any customization on this endpoint, also requiresss update for Default-Start endpoint
@@ -86,7 +86,11 @@ server.get(
 
         pageMetaHelper.setPageMetaTags(req.pageMetaData, Site.current);
 
-        res.render("dwScriptDemo",dwScriptModel);
+
+        // var dwScript = new DwScriptModel()
+
+        res.render("dwScriptDemo", dwScriptModel);
+        // res.render("dwScriptDemo", dwScript)
         next();
     },
     pageMetaData.computedPageMetaData
