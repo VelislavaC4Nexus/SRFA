@@ -15,7 +15,7 @@ var userLoggedIn = require("*/cartridge/scripts/middleware/userLoggedIn");
  */
 server.append(
     "Start",
-    // userLoggedIn.validateLoggedIn,
+ 
 )
     
 
