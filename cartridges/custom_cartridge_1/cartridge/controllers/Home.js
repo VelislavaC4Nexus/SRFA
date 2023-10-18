@@ -74,14 +74,15 @@ server.extend(module.superModule);
 server.append("Show", function (req, res, next) {
 
     let viewData = res.getViewData();
-   
- 
+
+
 
     if (HookMgr.hasHook("app.home.calculate")) {
         HookMgr.callHook("app.home.calculate", "calculatePrice", viewData);
+     
     }
-
-    res.setViewData(viewData);
+    res.json({ msg: viewData })
+    // res.setViewData(viewData);
 
     next();
 });
