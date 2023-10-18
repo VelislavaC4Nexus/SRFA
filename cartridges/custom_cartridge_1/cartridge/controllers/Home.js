@@ -61,7 +61,7 @@
 
 
 
-// module.exports = server.exports();
+module.exports = server.exports();
 
 
 "use strict";
