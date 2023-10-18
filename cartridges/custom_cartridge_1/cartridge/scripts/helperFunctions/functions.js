@@ -38,7 +38,7 @@ function getDifferentProductPricesForGivenProduct(product) {
  * @returns {Object}
  */
 function getCatalogMainCategories(catalog) {
-    catalog.getRoot()
+    catalog.getRoot();
 }
 
 // Create a function to get customer by ID
@@ -56,5 +56,5 @@ function getCustomerByID(customer) {
  * @returns {Boolean} 
  */
 function checkIfCustomerIsAssignedToGivenCustomerGroup(customer, groupID) {
-    customer.isMemberOfAnyCustomerGroup(groupID)
+    customer.isMemberOfCustomerGroup(groupID);
 }

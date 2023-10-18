@@ -8,10 +8,8 @@ var server = require("server");
 var cache = require("*/cartridge/scripts/middleware/cache");
 var consentTracking = require("*/cartridge/scripts/middleware/consentTracking");
 var pageMetaData = require("*/cartridge/scripts/middleware/pageMetaData");
-// var userLoggedIn = require('*/cartridge/scripts/middleware/userLoggedIn');
-
 /**
- * Any AAA customization on this endpoint, also requires update for Default-Start endpoint AAA
+ * Any customization on this endpoint, also requires update for Default-Start endpoint AAA
 /**
  * Home-Show : This endpoint is called when a shopper navigates to the home page
  * @name Base/Home-Show
@@ -25,7 +23,6 @@ var pageMetaData = require("*/cartridge/scripts/middleware/pageMetaData");
  */
 server.get(
     "Show",
-    // userLoggedIn.validateLoggedIn,
     consentTracking.consent,
     cache.applyDefaultCache,
     function (req, res, next) {
