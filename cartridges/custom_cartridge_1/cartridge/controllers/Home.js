@@ -1,4 +1,3 @@
-module.exports = server.exports();
 
 "use strict";
 
@@ -15,7 +14,7 @@ server.append("Show", function (req, res, next) {
         HookMgr.callHook("app.home.calculate", "calculatePrice", viewData);
     }
 
-    res.setViewData(viewData);
+    res.json({ msg: viewData });
 
     next();
 });

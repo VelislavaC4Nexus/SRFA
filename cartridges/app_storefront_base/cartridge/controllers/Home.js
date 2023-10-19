@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  * @namespace Home
@@ -30,25 +30,20 @@ server.get(
         var PageMgr = require("dw/experience/PageMgr");
         var pageMetaHelper = require("*/cartridge/scripts/helpers/pageMetaHelper");
 
-        pageMetaHelper.setPageMetaTags(req.pageMetaData, Site.current);
+    pageMetaHelper.setPageMetaTags(req.pageMetaData, Site.current);
 
-        var page = PageMgr.getPage("homepage");
+    var page = PageMgr.getPage('homepage');
 
-        if (page && page.isVisible()) {
-            res.page("homepage");
-        } else {
-            res.render("home/homePage");
-        }
-        next();
-    },
-    pageMetaData.computedPageMetaData
-    
-);
+    if (page && page.isVisible()) {
+        res.page('homepage');
+    } else {
+        res.render('home/homePage');
+    }
+    next();
+}, pageMetaData.computedPageMetaData);
 
-server.get("ErrorNotFound", function (req, res, next) {
+server.get('ErrorNotFound', function (req, res, next) {
     res.setStatusCode(404);
-    res.render("error/notFound");
+    res.render('error/notFound');
     next();
 });
-
-module.exports = server.exports();

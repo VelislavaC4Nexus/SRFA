@@ -4,7 +4,7 @@ function calculatePrice( viewData) {
     return viewData;
 }
 function getTotalPrice(quantity,price){
-    return  quantity * price
+    return  quantity * price;
 }
 
 module.exports = {
