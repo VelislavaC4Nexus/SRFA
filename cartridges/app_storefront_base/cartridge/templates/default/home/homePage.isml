@@ -23,6 +23,7 @@
 
     <div class="homepage shop-the-style">
         <isslot id="home-product-set-m" description="Link to a Product Set." context="global" />
+         <isslot id="slot-demo" description="Just a demo" context="global" />
     </div>
     <div class="home-email-signup">
         <div class="container">
