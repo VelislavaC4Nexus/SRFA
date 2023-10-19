@@ -9,9 +9,8 @@ var cache = require("*/cartridge/scripts/middleware/cache");
 var consentTracking = require("*/cartridge/scripts/middleware/consentTracking");
 var pageMetaData = require("*/cartridge/scripts/middleware/pageMetaData");
 /**
- * Any customization on this endpoint, also requires update for Default-Start endpoint AAA
+ * 
 /**
- * Home-Show : This endpoint is called when a shopper navigates to the home page
  * @name Base/LoggedOrGuestUser-Show
  * @function
  * @memberof LoggedOrGuestUser
@@ -33,27 +32,14 @@ server.get(
 
         pageMetaHelper.setPageMetaTags(req.pageMetaData, Site.current);
 
-        var page = PageMgr.getPage("homepage");
-
         var currentCustomer =req.currentCustomer.profile;
 
-        res.render('loggedOrGuest', { ContentMgr, currentCustomer })
-
-        // if (page && page.isVisible()) {
-        //     res.page("homepage");
-        // } else {
-        //     res.render("home/homePage");
-        // }
+        res.render('loggedOrGuest', { ContentMgr, currentCustomer });
+     
         next();
     },
     pageMetaData.computedPageMetaData
 
 );
-
-server.get("ErrorNotFound", function (req, res, next) {
-    res.setStatusCode(404);
-    res.render("error/notFound");
-    next();
-});
 
 module.exports = server.exports();
