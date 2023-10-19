@@ -44,5 +44,3 @@ server.get('ErrorNotFound', function (req, res, next) {
     res.render('error/notFound');
     next();
 });
-
-module.exports = server.exports();
