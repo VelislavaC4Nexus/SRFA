@@ -1,17 +1,19 @@
 <isscript>
 	var loggedInAsset =pdict.ContentMgr.getContent('Logged');
-    var guestAsset =pdict.ContentMgr.getContent('Guest');
+    var guestAsset = pdict.ContentMgr.getContent('Guest');
+    var loggedInAssetBody=loggedInAsset.custom.body;
+    var loggedInAssetBodyAsString=loggedInAssetBody +"";
+    var customerName = pdict.currentCustomer.firstName;
+    var resultString = loggedInAssetBodyAsString.replace("{0}", customerName);
 </isscript>
+
 <isdecorate template="common/layout/page">
     <!-- dwMarker="content" dwContentID="${pdict.content.UUID}" -->
     <isif condition="${pdict.currentCustomer}">
-        <isprint value="${loggedInAsset.custom.body}" encoding="off" />
+        <isprint value="${resultString}" encoding="off" />
     </isif>
     <isif condition="${!pdict.currentCustomer}">
-
-    <isprint value="${pdict.currentCustomer.firstName}" encoding="off" />
         <isprint value="${guestAsset.custom.body}" encoding="off" />
-
     </isif>
     <!-- END_dwmarker -->
 </isdecorate>
