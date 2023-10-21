@@ -1,0 +1,23 @@
+<isscript>
+    var arr = ['one','two','three'];
+</isscript>
+
+<isdecorate template="common/layout/page">
+    <h1>hi
+        <isprint value="${pdict.welcomeMsg}" />
+    </h1>
+    <isloop items="${arr}" var="item" status="index">
+    <isif condition="${index.index==2}">
+        <p><strong>${item}</strong></p>
+    <iselse/>
+        
+        <p>${item}</p>
+    </isif>
+    </isloop>
+    <isset name="changeScope" value="1" scope="pdict" />
+    
+    ${pdict.welcomeMsg} <span>Shortcut to print sth. without tag</span>
+    <isprint value="${new Date()}" style="DATE_LONG" />
+    <isinclude template="includeTemplate" /> <span> Local include == Remote include == NO Cache</span>
+    
+</isdecorate>
