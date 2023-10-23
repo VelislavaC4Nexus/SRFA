@@ -32,10 +32,24 @@ server.get(
 
         pageMetaHelper.setPageMetaTags(req.pageMetaData, Site.current);
 
-        var currentCustomer =req.currentCustomer.profile;
+        var loggedInAsset = ContentMgr.getContent('Logged');
+        var guestAsset = ContentMgr.getContent('Guest');
+        var loggedInAssetBody = loggedInAsset.custom.body;
+        var guestAssetBody = guestAsset.custom.body;
 
-        res.render('loggedOrGuest', { ContentMgr, currentCustomer });
-     
+        var currentCustomer = req.currentCustomer.profile;
+        var messageLoogedOrGuest;
+
+        if (currentCustomer) {
+            var customerName = currentCustomer.firstName;
+            var loggedInAssetBodyAsString = loggedInAssetBody + "";
+            messageLoogedOrGuest = loggedInAssetBodyAsString.replace("{0}", customerName);
+        } else {
+            messageLoogedOrGuest = guestAssetBody;
+        }
+
+        res.render('loggedOrGuest', { messageLoogedOrGuest });
+
         next();
     },
     pageMetaData.computedPageMetaData
