@@ -1,5 +1,4 @@
 "use strict";
-
 /**
  * @namespace AssetsAndSlots
  */
@@ -57,7 +56,6 @@ server.get(
         var ContentMgr = require('dw/content/ContentMgr');
 
         pageMetaHelper.setPageMetaTags(req.pageMetaData, Site.current);
-
 
         var currentCustomer = req.currentCustomer.profile;
         var messageLoogedOrGuest;
