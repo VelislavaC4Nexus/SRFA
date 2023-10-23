@@ -62,13 +62,13 @@ server.get(
 
         if (currentCustomer) {
             var loggedInAsset = ContentMgr.getContent('Logged');
-            var loggedInAssetBody = loggedInAsset.custom.body;
+            var loggedInAssetBody = loggedInAsset ? loggedInAsset.custom.body : '';
             var customerName = currentCustomer.firstName;
             var loggedInAssetBodyAsString = loggedInAssetBody.toString();
             messageLoogedOrGuest = loggedInAssetBodyAsString.replace("{0}", customerName);
         } else {
             var guestAsset = ContentMgr.getContent('Guest');
-            var guestAssetBody = guestAsset.custom.body;
+            var guestAssetBody = guestAsset ? guestAsset.custom.body : '';
             messageLoogedOrGuest = guestAssetBody;
         }
 
