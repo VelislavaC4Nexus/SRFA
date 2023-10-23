@@ -36,7 +36,7 @@ server.get(
        
         next();
     },
-    pageMetaData.computedPageMetaData;
+    pageMetaData.computedPageMetaData
 );
 
 module.exports = server.exports();
