@@ -9,6 +9,7 @@
     <isset name="product" value="${pdict.product}" scope="page" />
     <isset name="isQuickView" value="${false}" scope="page" />
     <isset name="isProductSet" value="${pdict.product.productType === 'set'}" scope="page" />
+    <isset name="showPromo" value=" ${product.attributes[0].attributes[0].value[0]}" scope="page" />
     <isobject object="${product.raw}" view="detail" />
         <div class="container product-detail product-wrapper" data-pid="${product.id}">
             <div class="row">
@@ -119,7 +120,11 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <isif condition="${showPromo}">
+                                <p>Promo</p>
+                            <iselse/>
+                                <p>No Promo</p>
+                            </isif>
                             <!-- Cart and [Optionally] Apple Pay -->
                             <isinclude template="product/components/addToCartProduct" />
                         </div>
