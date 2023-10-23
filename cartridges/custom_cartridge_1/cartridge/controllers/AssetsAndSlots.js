@@ -64,8 +64,7 @@ server.get(
             var loggedInAsset = ContentMgr.getContent('Logged');
             var loggedInAssetBody = loggedInAsset ? loggedInAsset.custom.body : '';
             messageLoogedOrGuest = loggedInAssetBody
-                .toString().loggedInAssetBodyAsString
-                .replace("{0}", currentCustomer.firstName);
+                .toString().replace("{0}", currentCustomer.firstName);
         } else {
             var guestAsset = ContentMgr.getContent('Guest');
             var guestAssetBody = guestAsset ? guestAsset.custom.body : '';
