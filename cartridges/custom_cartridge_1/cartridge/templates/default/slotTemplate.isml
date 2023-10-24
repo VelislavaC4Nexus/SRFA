@@ -1,0 +1,3 @@
+<h1>Hello from Slot Demo</h1>
+<isslot id="slot-demo" description="Some slot description" context="global" />
+
