@@ -67,6 +67,14 @@
                                 <isinclude template="cart/productCard/cartProductCard" />
                             </isif>
                         </isif>
+
+                        <isif condition="${index.first}">
+                            <p><strong>This is the first item in the bag</strong></p>
+                        <iselseif condition="${index.last}">
+
+                                <p><strong>This is the last item in the bag</strong></p>
+                            </iselseif>
+                        </isif>
                     </isloop>
                     <isinclude template="cart/cartApproachingDiscount" />
                 </div>

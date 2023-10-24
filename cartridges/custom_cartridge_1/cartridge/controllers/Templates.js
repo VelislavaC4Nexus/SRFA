@@ -1,5 +1,5 @@
 var server = require("server");
-var cahe = require('*/cartridge/scripts/middleware/cache');
+var cache = require('*/cartridge/scripts/middleware/cache');
 var consentTracking = require('*/cartridge/scripts/middleware/consentTracking');
 var pageMetaData = require('*/cartridge/scripts/middleware/pageMetaData');
 
@@ -16,7 +16,7 @@ var pageMetaData = require('*/cartridge/scripts/middleware/pageMetaData');
  */
 server.get('Show',
     consentTracking.consent,
-    cahe.applyDefaultCache,
+    cache.applyDefaultCache,
     function (req, res, next) {
         var Site = require('dw/system/Site');
         res.render('template', { welcomeMsg: 'Welcome User' });

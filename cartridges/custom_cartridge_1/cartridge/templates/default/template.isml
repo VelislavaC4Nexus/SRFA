@@ -15,8 +15,6 @@
         </isif>
     </isloop>
     <isset name="changeScope" value="1" scope="pdict" />
-
-    ${pdict.welcomeMsg} <span>Shortcut to print sth. without tag</span>
     <isprint value="${new Date()}" style="DATE_LONG" />
     <isinclude template="includeTemplate" /> <span> Local include == Remote include == NO Cache</span>
 
