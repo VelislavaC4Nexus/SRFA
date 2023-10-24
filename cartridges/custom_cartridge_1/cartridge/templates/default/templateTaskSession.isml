@@ -1,0 +1,8 @@
+<isif condition="${session.custom.newVar !== 1}">
+    <isset name="newVar" value="${1}" />
+    ${session.custom.newVar = newVar}
+<iselse/>
+    ${session.custom.newVar += 1}
+</isif>
+
+
