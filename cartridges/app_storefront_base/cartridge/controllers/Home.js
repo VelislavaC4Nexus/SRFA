@@ -10,7 +10,8 @@ var consentTracking = require('*/cartridge/scripts/middleware/consentTracking');
 var pageMetaData = require('*/cartridge/scripts/middleware/pageMetaData');
 
 /**
- * Any customization on this endpoint, also requires update for Default-Start endpoint AAA
+ * Any customization on this endpoint, also requires update for Default-Start endpoint
+ */
 /**
  * Home-Show : This endpoint is called when a shopper navigates to the home page
  * @name Base/Home-Show
@@ -44,3 +45,5 @@ server.get('ErrorNotFound', function (req, res, next) {
     res.render('error/notFound');
     next();
 });
+
+module.exports = server.exports();
