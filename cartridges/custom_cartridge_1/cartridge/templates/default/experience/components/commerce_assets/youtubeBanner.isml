@@ -1,0 +1,10 @@
+<div class="banner-background">
+    <div class="row">
+        <div class="col-md-6 col-sm-6 mx-auto d-block">
+            <iframe  width="${pdict.width}" height="${pdict.height}" src="${pdict.src}" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>

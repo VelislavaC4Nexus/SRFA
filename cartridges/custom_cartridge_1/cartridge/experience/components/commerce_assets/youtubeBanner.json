@@ -1,0 +1,38 @@
+{
+    "name": "YoutubeBanner",
+    "description": "Youtube banner.",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "video",
+            "name": "Youtube banner configuration",
+            "description": "You can define the video source file.",
+            "attribute_definitions": [
+                {
+                    "id": "link",
+                    "name": "Youtube video link",
+                    "description": "The video shown by the banner.",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id": "width",
+                    "name": "Youtube banner width",
+                    "description": "The youtube banner width.",
+                    "type": "string",
+                    "required": false,
+                    "default_value": "400"
+                },
+                {
+                    "id": "height",
+                    "name": "Youtube banner height",
+                    "description": "The youtube banner height",
+                    "type": "string",
+                    "required": false,
+                    "default_value": "60"
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}
