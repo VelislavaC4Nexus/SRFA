@@ -43,12 +43,10 @@ server.append(
     function (req, res, next) {
         var accountHelpers = require('*/cartridge/scripts/account/accountHelpers');
         var accountModel = accountHelpers.getAccountModel(req);
-        var profileForm = server.forms.getForm('profile');
         var profileData = res.getViewData();
-        profileForm.customer.interests.value = accountModel.profile.interests;
-        profileForm.customer.residence.value = accountModel.profile.residence;
+        profileData.profileForm.customer.interests.value = accountModel.profile.interests;
+        profileData.profileForm.customer.residence.value = accountModel.profile.residence;
         res.setViewData(profileForm)
-
         next();
     });
 
