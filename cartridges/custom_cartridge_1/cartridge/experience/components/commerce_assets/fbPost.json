@@ -1,0 +1,54 @@
+{
+    "name": "FacebookPost",
+    "description": "Facebook post component.",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "post",
+            "name": "Facebook post",
+            "description": "Facebook post.",
+            "attribute_definitions": [
+                {
+                    "id": "iframeSrc",
+                    "name": "Facebook post iframe src",
+                    "description": "The Facebook post shown in the component.",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id": "width",
+                    "name": "Facebook post width",
+                    "description": "The youtube banner width.",
+                    "type": "string",
+                    "required": false,
+                    "default_value": "400"
+              
+                },
+                {
+                    "id": "height",
+                    "name": "Facebook post height",
+                    "description": "The youtube banner height",
+                    "type": "string",
+                    "required": false,
+                    "default_value": "400"
+                  
+                },
+                {
+                    "id": "merchandisersTitle",
+                    "name": "Content title",
+                    "description": "Merchandiser`s content title",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id": "content",
+                    "name": "Content",
+                    "description": "Merchandiser`s content",
+                    "type": "string",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

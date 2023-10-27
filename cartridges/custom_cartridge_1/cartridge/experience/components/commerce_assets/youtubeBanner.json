@@ -29,7 +29,7 @@
                     "description": "The youtube banner height",
                     "type": "string",
                     "required": false,
-                    "default_value": "60"
+                    "default_value": "80"
                 }
             ]
         }
