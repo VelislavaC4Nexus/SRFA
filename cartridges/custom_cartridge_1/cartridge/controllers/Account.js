@@ -46,7 +46,7 @@ server.append(
         var profileData = res.getViewData();
         profileData.profileForm.customer.interests.value = accountModel.profile.interests;
         profileData.profileForm.customer.residence.value = accountModel.profile.residence;
-        res.setViewData(profileForm)
+        res.setViewData(profileData)
         next();
     });
 
