@@ -1,0 +1,4 @@
+<div>
+    <h2>Hello from CAT FACTS</h2>
+    <h2>${pdict.catFact.fact}</h2>
+</div>

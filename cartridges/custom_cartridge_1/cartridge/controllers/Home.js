@@ -14,7 +14,7 @@ server.append("Show", function (req, res, next) {
         HookMgr.callHook("app.home.calculate", "calculatePrice", viewData);
     }
 
-    res.json({ msg: viewData });
+    // res.json({ msg: viewData });
 
     next();
 });
