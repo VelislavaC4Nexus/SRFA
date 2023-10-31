@@ -1,36 +1,35 @@
 'use strict'
 
 /**
- * @namespace Cat
+ *@namespace Swapi
  */
 var server = require('server');
 var cache = require('*/cartridge/scripts/middleware/cache');
 var consentTracking = require("*/cartridge/scripts/middleware/consentTracking");
-var catFactService = require("*/cartridge/scripts/catFactService");
+var swapiService = require("*/cartridge/scripts/swapiService");
 
 /**
  * Cat-Facts: Used to retrieve a cat fact.
- * @name Cat-Fact
+ * @name Swapi-DeathStar
  * @function
- * @memberof Cat
+ * @memberof Swapi
  * @param {middleware} - consentTracking.consent
  * @param {middleware} - cache.applyDefaultCache
  * @param {category} - non-sensitive
  * @param {renders} - isml
- * @param {dw.net.HTTPClient} client - HTTPClient class instance of the current service
  * @param {serverfunction} - get
  */
 
 server.get(
-    "Fact",
+    "DeathStar",
     consentTracking.consent,
     cache.applyDefaultCache,
     function (req, res, next) {
 
-        var catFact = JSON.parse(catFactService.getCatFact());
+        var deathStar = JSON.parse(swapiService.getDeathStar());
 
-        res.render('cat', {
-            catFact: catFact
+        res.render('deathStar', {
+            deathStar: deathStar
         });
         next();
     },

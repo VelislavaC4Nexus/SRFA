@@ -12,6 +12,8 @@
     </div>
 
     <isinclude url="${URLUtils.url('Cat-Fact')}" />
+    
+    <isinclude url="${URLUtils.url('Swapi-DeathStar')}" />
 
     <div class="container home-categories homepage">
         <div class="row home-main-categories no-gutters">
