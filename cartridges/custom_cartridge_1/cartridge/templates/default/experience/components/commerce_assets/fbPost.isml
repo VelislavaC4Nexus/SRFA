@@ -1,7 +1,7 @@
 <div class="d-flex">
    <div class="col-md-6">
         <iframe src="${pdict.iframeSrc}" width="${pdict.width}" height="${pdict.height}" title="${pdict.title}"
-            style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
+          class="fb-post-iframe" scrolling="no" frameborder="0" allowfullscreen="true"
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
     </div> 
     <div class="col-md-6">
