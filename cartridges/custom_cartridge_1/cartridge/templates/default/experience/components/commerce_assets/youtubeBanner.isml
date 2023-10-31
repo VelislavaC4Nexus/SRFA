@@ -1,0 +1,19 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+      assets.addCss('/css/experience/components/commerceAssets/youtubeBanner.css');
+</isscript>
+<div class="banner-background">
+    <div class="row d-flex">
+        <div class="col-md-6 col-sm-6">
+            <img class="banner-image"
+                src="https://www.freeiconspng.com/uploads/youtube-subscribe-button-classic-png-2.png" alt="">
+        </div>
+        <div class="col-md-6 col-sm-6 banner-video">
+            <iframe width="${pdict.width}" height="${pdict.height}" src="${pdict.src}" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>

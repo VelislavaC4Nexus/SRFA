@@ -114,12 +114,15 @@
     "last 2 versions",
     "ie >= 10"
   ],
-  "packageName": "app_storefront_base",
   "babel": {
     "presets": [
       "env"
     ]
   },
+  "paths": {
+    "base": "./cartridges/app_storefront_base/"
+  },
+  "packageName": "custom_cartridge_1",
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint",
