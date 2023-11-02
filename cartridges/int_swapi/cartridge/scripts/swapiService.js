@@ -10,14 +10,14 @@ function getDeathStar() {
             return client.text;
         },
         filterLogMessage: function (msg) {
-            return msg.replace(/cost_in_credits\: \".*?\"/, "cost_in_credits:$$$$$$$$$$$$$$$$$$$");
+
+            return msg.replace(/"cost_in_credits":"\d+"/,"cost_in_credits:$$$$$$$$$$$$$$$$$$$");
         }
     });
     var response = getSwapiService.call().object;
     
     return response;
 }
-
 module.exports = {
     getDeathStar: getDeathStar
 };

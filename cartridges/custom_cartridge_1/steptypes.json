@@ -1,0 +1,11 @@
+{
+    "step-types": {
+        "script-module-step": [
+            {
+                "@type-id":"custom.DemoTestJobStep",
+                "description": "My custom script step type",
+                "module":"custom_cartridge_1/cartridge/scripts/steps/DemoTestModuleJob"
+            }
+        ]
+    }
+}
