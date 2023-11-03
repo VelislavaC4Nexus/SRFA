@@ -17,10 +17,11 @@ module.exports.execute = function () {
 
         while (demoObjectIterator.hasNext()) {
             var demo = demoObjectIterator.next();
+            var id = 
             
             xsw.writeStartElement("product");
-            xsw.writeAttribute("id", "demo.custom.product");
-            xsw.writeAttribute("name", "demo.custom.name");
+            xsw.writeAttribute("id", demo.custom.product);
+            xsw.writeAttribute("name", demo.custom.name);
             xsw.writeEndElement();
         }
         xsw.writeEndElement();
