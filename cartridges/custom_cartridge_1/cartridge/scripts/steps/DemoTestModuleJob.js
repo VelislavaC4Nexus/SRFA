@@ -8,7 +8,7 @@ module.exports.execute = function () {
     var fileWriter;
 
     try {
-        file = new File([File.IMPEX, 'test', 'text.xml'].join(File.SEPARATOR));
+        file = new File([File.IMPEX, 'text.xml'].join(File.SEPARATOR));
         fileWriter = new FileWriter(file);
         
         xsw = new XMLStreamWriter(fileWriter);
