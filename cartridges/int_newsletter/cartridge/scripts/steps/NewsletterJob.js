@@ -31,7 +31,7 @@ module.exports.execute = function () {
         }
     } catch (e) {
         var logger = Logger.getLogger('DemoLog', 'Job');
-        logger.error(e.message)
+        logger.error(e.message);
     } finally {
         csvSw.close();
         fileWriter.close();
