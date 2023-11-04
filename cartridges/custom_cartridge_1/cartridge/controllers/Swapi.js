@@ -7,6 +7,8 @@ var server = require('server');
 var cache = require('*/cartridge/scripts/middleware/cache');
 var consentTracking = require("*/cartridge/scripts/middleware/consentTracking");
 var swapiService = require("*/cartridge/scripts/swapiService");
+var System = require('dw/system');
+
 
 /**
  * Cat-Facts: Used to retrieve a cat fact.
@@ -26,7 +28,14 @@ server.get(
     cache.applyDefaultCache,
     function (req, res, next) {
 
-        var deathStar = JSON.parse(swapiService.getDeathStar());
+        var Site = require('dw/system/Site');
+        var deathStar = 'SWAPI is disabled';
+        var customPreferenceValueSwapi = Site.current.getCustomPreferenceValue('enableSWAPI');
+
+        if (customPreferenceValueSwapi) {
+            var getDeathStar = JSON.parse(swapiService.getDeathStar());
+            deathStar = `${getDeathStar.name}, ${getDeathStar.manufacturer},${getDeathStar.starship_class}`
+        }
 
         res.render('deathStar', {
             deathStar: deathStar
