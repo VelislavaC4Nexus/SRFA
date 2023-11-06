@@ -1,0 +1,11 @@
+{
+    "step-types": {
+        "script-module-step": [
+            {
+                "@type-id":"custom.NewsletterJobStep",
+                "description": "My custom script step type",
+                "module":"int_newsletter/cartridge/scripts/steps/NewsletterJob"
+            }
+        ]
+    }
+}
