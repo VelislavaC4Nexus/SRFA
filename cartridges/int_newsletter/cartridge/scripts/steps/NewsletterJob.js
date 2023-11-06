@@ -11,14 +11,14 @@ module.exports.execute = function () {
     var fileWriter;
 
     try {
-        file = new File([File.IMPEX, "objects.csv"].join(File.SEPARATOR));
+        file = new File([File.IMPEX, "newsletter.csv"].join(File.SEPARATOR));
         fileWriter = new FileWriter(file);
 
         csvSw = new CSVStreamWriter(fileWriter);
 
         var customAttributes = ["firstname", "lastname", "email", "gender"];
-        csvSw.writeNext(customAttributes)
-     
+        csvSw.writeNext(customAttributes);
+
         while (newsletterObjectIterator.hasNext()) {
             var newsletterPresentation = newsletterObjectIterator.next();
 
@@ -33,7 +33,9 @@ module.exports.execute = function () {
         var logger = Logger.getLogger('DemoLog', 'Job');
         logger.error(e.message);
     } finally {
-        csvSw.close();
+        if (csvSw && 'close' in csvSw) {
+            csvSw.close();
+        }
         fileWriter.close();
     }
 }
